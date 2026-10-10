@@ -1,0 +1,9 @@
+# Complete runtime dependencies for Python 3.12; the local rebunet package needs no installation.
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+torch==2.6.0
+PyYAML==6.0.3
+scikit-learn==1.8.0
+matplotlib==3.10.8
+kaggle==1.6.17

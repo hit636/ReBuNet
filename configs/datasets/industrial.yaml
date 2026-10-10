@@ -1,0 +1,13 @@
+extends: ../base.yaml
+data:
+  path: data/processed/industrial
+  train_end: 1770
+  val_end: 1798
+  remove_leading_zeros: false
+model:
+  lookback: 84
+  event_history: 32
+  hidden: 96
+  tcn_layers: 3
+protocol:
+  split_source: assumed_1826_day_snapshot_last_28_test_previous_28_validation

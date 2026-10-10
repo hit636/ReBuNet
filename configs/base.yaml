@@ -1,0 +1,47 @@
+data:
+  path: data/processed/m5
+  train_end: 1885
+  val_end: 1913
+  common_origin_start: 112
+  train_stride: 1
+  eval_stride: 28
+  remove_leading_zeros: true
+model:
+  name: rebunet
+  lookback: 112
+  horizon: 28
+  event_history: 64
+  hidden: 128
+  tcn_layers: 4
+  dropout: 0.1
+  state: scalar
+  cap: 128
+  mark: ordered
+  use_events: true
+  delta: 0.001
+  age_dim: 16
+  horizon_dim: 16
+  static_dim: 8
+  mc_samples: 64
+train:
+  seed: 0
+  batch_size: 256
+  learning_rate: 0.0005
+  epochs: 100
+  warmup_epochs: 5
+  patience: 10
+  steps_per_epoch: 1000
+  num_workers: 0
+  gradient_clip: 1.0
+  device: auto
+  deterministic: true
+  threads: 4
+metrics:
+  tail_tolerance: 0.000001
+  max_support: 200000
+  support_chunk: 256
+  intervals: [0.5, 0.8, 0.95]
+protocol:
+  status: reconstructed_not_author_verified
+  split_source: assumed_last_28_test_previous_28_validation
+  unknowns: [exact_splits, origins, encoder_kernel_size, age_encoder, baseline_tuning, stopping_schedule]

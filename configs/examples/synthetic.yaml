@@ -1,0 +1,29 @@
+extends: ../base.yaml
+data:
+  path: data/processed/synthetic
+  train_end: 168
+  val_end: 196
+  common_origin_start: 112
+  train_stride: 7
+  eval_stride: 28
+  remove_leading_zeros: false
+model:
+  lookback: 28
+  event_history: 8
+  hidden: 16
+  tcn_layers: 2
+  age_dim: 4
+  horizon_dim: 4
+  static_dim: 4
+  mc_samples: 8
+train:
+  batch_size: 8
+  epochs: 2
+  warmup_epochs: 1
+  patience: 2
+  steps_per_epoch: 3
+  device: cpu
+  threads: 2
+protocol:
+  status: synthetic_smoke_not_paper_result
+  split_source: synthetic_fixed_indices

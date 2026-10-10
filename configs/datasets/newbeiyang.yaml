@@ -1,0 +1,9 @@
+extends: industrial.yaml
+data:
+  path: data/processed/newbeiyang
+  # Paper-sized 1826-day snapshot. Replace with verified author boundaries.
+  train_end: 1770
+  val_end: 1798
+protocol:
+  status: requires_full_daily_export_and_inventory_logs
+  source_schema: NewBeiyang_daily_sales_data

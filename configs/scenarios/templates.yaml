@@ -1,0 +1,17 @@
+# Synthetic stress templates, not paper datasets. start_day is zero-based; announced means known in advance.
+series: 48
+days: 224
+generator_seed: 2026
+scenarios:
+  - name: renewal_reference
+  - name: age_independent
+  - name: rare_large_burst
+  - name: planned_promotion
+  - name: unannounced_shock
+  - name: stockout
+# Each scenario may define an events list:
+#   - start_day: 198
+#     duration: 7
+#     announced: false
+#     occurrence_multiplier: 1.5
+#     magnitude_multiplier: 3.0

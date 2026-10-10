@@ -1,0 +1,5 @@
+extends: ../examples/synthetic.yaml
+train:
+  epochs: 1
+  warmup_epochs: 0
+  steps_per_epoch: 2
