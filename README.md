@@ -2,6 +2,9 @@
 
 A local-source implementation of **ReBuNet: Renewal-Aware Burst Mixture Networks for Probabilistic Forecasting of Sparse Count Time Series**.
 
+<img width="2400" height="1208" alt="image" src="https://github.com/user-attachments/assets/4d6dc3e7-6ba4-4d59-8f38-0e7ece00ebb0" />
+
+
 The repository provides the model, data adapters, training and evaluation pipeline, runnable baselines, experiment configurations, and shell entrypoints. Import the local `rebunet` directory directly; installing this project as a Python package is not required.
 
 **Reproduction status.** This is an independent research reconstruction. The repository covers the paper's experiment configuration matrix, but does not establish numerical equality with its reported results. The original industrial snapshot, exact author train/validation/test boundaries, and some baseline-specific settings are unavailable. Five external baseline implementations must be supplied for the complete comparison. No real-data benchmark scores, private sales records, trained checkpoints, or generated experiment artifacts are distributed here.
